@@ -6,7 +6,7 @@
 
 <br>
 
-# FarmTechSolutions
+# FarmTech Solutions
 
 ## Beginner Coders
 
