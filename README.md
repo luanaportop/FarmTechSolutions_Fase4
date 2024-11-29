@@ -26,6 +26,13 @@
 
 Este repositório apresenta as melhorias realizadas no projeto da Fase 3 da FarmTech Solutions. A seguir, os principais objetivos desta fase:
 
+## Objetivos
+- [x] Incorporar Scikit-learn para previsão de irrigação.
+- [x] Criar um dashboard interativo com Streamlit.
+- [x] Adicionar um display LCD para exibir métricas no ESP32 (simulado no Wokwi).
+- [x] Monitorar variáveis no Serial Plotter.
+- [x] Otimizar o uso de memória no código C/C++ do ESP32.
+
 
 ## 📁 Estrutura de pastas
 
