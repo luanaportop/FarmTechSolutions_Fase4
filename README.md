@@ -6,7 +6,7 @@
 
 <br>
 
-# FarmTech Solutions
+# FarmTech Solutions - Fase 4
 
 ## Beginner Coders
 
@@ -24,7 +24,7 @@
 
 ## 📜 Descrição
 
-*Descreva seu projeto com base no texto do PBL (até 600 palavras)*
+Este repositório apresenta as melhorias realizadas no projeto da Fase 3 da FarmTech Solutions. A seguir, os principais objetivos desta fase:
 
 
 ## 📁 Estrutura de pastas
