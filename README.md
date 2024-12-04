@@ -13,7 +13,7 @@
 ## 👨‍🎓 Integrantes: 
 - <a href="https://www.linkedin.com/in/luana-porto-pereira-gomes/">Luana Porto Pereira Gomes</a>
 - <a href="https://www.linkedin.com/in/priscilla-oliveira-023007333/">Priscilla Oliveira </a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 3</a> 
+- <a href="https://www.linkedin.com/company/inova-fusca">Paulo Bernardes</a> 
 
 ## 👩‍🏫 Professores:
 ### Tutor(a) 
@@ -31,30 +31,28 @@ Este repositório apresenta as melhorias realizadas no projeto da Fase 3 da Farm
 - [x] Criar um dashboard interativo com Streamlit.
 - [x] Adicionar um display LCD para exibir métricas no ESP32 (simulado no Wokwi).
 - [x] Monitorar variáveis no Serial Plotter.
-- [x] Otimizar o uso de memória no código C/C++ do ESP32.
-
+- [x] Otimizar o uso de memória no código C/C++ do ESP32. 
+- [x] Melhoria no Banco de Dados.
 
 ## 📁 Estrutura de pastas
 
 Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
-- <b>.github</b>: Nesta pasta ficarão os arquivos de configuração específicos do GitHub que ajudam a gerenciar e automatizar processos no repositório.
+- <b>assets</b>: aqui estão as imagens do banco de dados relacional e do funcionamento do Serial Plotter.
 
-- <b>assets</b>: aqui estão os arquivos relacionados a elementos não-estruturados deste repositório, como imagens.
+- <b>scripts</b>: aqui está um código python auxiliar para gerar dados ----------
 
-- <b>config</b>: Posicione aqui arquivos de configuração que são usados para definir parâmetros e ajustes do projeto.
-
-- <b>document</b>: aqui estão todos os documentos do projeto que as atividades poderão pedir. Na subpasta "other", adicione documentos complementares e menos importantes.
-
-- <b>scripts</b>: Posicione aqui scripts auxiliares para tarefas específicas do seu projeto. Exemplo: deploy, migrações de banco de dados, backups.
-
-- <b>src</b>: Todo o código fonte criado para o desenvolvimento do projeto ao longo das 7 fases.
+- <b>src</b>: Todo o código fonte criado para o desenvolvimento do projeto. Código principal (main.py), código de modelagem preditiva Scikit-learn (modelagem.py), código de interface interativa (front.py), código C++ do circuito ESP32 (cod.cpp) e arquivo csv usado para o código de modelagem preditiva e interface interativa.
 
 - <b>README.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
 
 ## 🔧 Como executar o código
 
 *Acrescentar as informações necessárias sobre pré-requisitos (IDEs, serviços, bibliotecas etc.) e instalação básica do projeto, descrevendo eventuais versões utilizadas. Colocar um passo a passo de como o leitor pode baixar o seu código e executá-lo a partir de sua máquina ou seu repositório. Considere a explicação organizada em fase.*
+#### Código Python:
+#### Código C++:
+   - Abra o link do circuito wokwi: https://wokwi.com/projects/415903032457764865
+   - Instale as bibliotecas: DHT.h, Wire.h, LiquidCrystal_I2C.h
 
 
 ## 🗃 Histórico de lançamentos
@@ -67,8 +65,63 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
     * 
 * 0.2.0 - XX/XX/2024
     * 
-* 0.1.0 - XX/XX/2024
+* 0.1.0 - 03/12/2024
     *
+
+## Melhorias do projeto FarmTech Solutions
+### Circuito ESP32:
+#### **Funcionalidades do Sistema**
+1. **Leitura de Sensores:**
+   - **DHT22:** Temperatura e umidade relativa.
+   - **LDR:** Simula a umidade do solo.
+   - **Potenciômetros:** Simulam os níveis de potássio e fósforo no solo.
+
+2. **Controle Automático da Bomba:**
+   - A bomba é ativada automaticamente se a umidade do solo estiver abaixo de 30%.
+   - O estado da bomba é exibido no display LCD e no Serial Plotter.
+
+3. **Exibição no Display LCD (20x4, I2C):**
+   - Linha 1: Temperatura e umidade relativa.
+   - Linha 2: Umidade do solo.
+   - Linha 3: Níveis de potássio e fósforo.
+   - Linha 4: Estado da bomba (Ligada/Desligada).
+
+4. **Serial Plotter:**
+   - Exibe gráficos em tempo real das variáveis:
+     - Temperatura.
+     - Umidade relativa.
+     - Umidade do solo.
+     - Potássio e fósforo.
+     - Estado da bomba.
+       
+   <a href= "#"><img src="SP-1.png" alt="Serial Plotter" border="0" width=40% height=40%></a>
+   <a href= "#"><img src="SP-2.png" alt="Serial Plotter" border="0" width=40% height=40%></a>
+   <a href= "#"><img src="SP-3.png" alt="Serial Plotter" border="0" width=40% height=40%></a>
+
+---
+
+#### **Melhorias Implementadas**
+- Normalizamos a leitura do LDR para uma escala de 0 a 100%.
+- Utilizamos potenciômetros como simuladores para os níveis de potássio e fósforo.
+- Normalizamos a leitura do potenciômetro para: Potássio (Escala de 0 a 100 mg/dm³) e fósforo (Escala de 0 a 30 mg/dm³).
+- Estabelecemos os limites médios ideais de potássio (60 mg/dm³) e fósforo (15 mg/dm³) no solo.
+- Normalizamos a leitura do DHT22 para exibir os valores com duas casas decimais (temperatura e umidade relativa).
+- Otimização do código: Reduzimos redundâncias e organizamos as funções para maior clareza e a justamos o intervalo de leituras para 5 segundos.
+- Adicionamos mensagens de aviso para níveis críticos de potássio, fósforo e umidade do solo.
+
+### Código Python e Banco de dados:
+#### **Melhorias Implementadas**
+Banco de dados:
+- Substituimos a tabela t_sensor para t_leitura para deixar o banco de dados mais coerente com o projeto.
+- Ajuste do tipo de dado do campo potassio fosforo
+- Add status irrigacao
+- Na t irrigaçao data_hora para nome
+- FOTO
+Código Python:
+
+
+
+
 
 ## 📋 Licença
 
