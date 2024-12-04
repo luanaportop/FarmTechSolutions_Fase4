@@ -94,9 +94,9 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
      - Potássio e fósforo.
      - Estado da bomba.
        
-   <a href= "#"><img src="SP-1.png" alt="Serial Plotter" border="0" width=40% height=40%></a>
-   <a href= "#"><img src="SP-2.png" alt="Serial Plotter" border="0" width=40% height=40%></a>
-   <a href= "#"><img src="SP-3.png" alt="Serial Plotter" border="0" width=40% height=40%></a>
+   <a href= "#"><img src="assets/SP-1.png" alt="Serial Plotter" border="0" width=40% height=40%></a>
+   <a href= "#"><img src="assets/SP-2.png" alt="Serial Plotter" border="0" width=40% height=40%></a>
+   <a href= "#"><img src="assets/SP-3.png" alt="Serial Plotter" border="0" width=40% height=40%></a>
 
 ---
 
@@ -117,7 +117,7 @@ Banco de dados:
 - Adicionamos à tabela t_leitura o campo de status_irrigacao.
 - Substituimos na tabela t_irrigacao o campo data_hora para irrigacao_cultura, permitindo que o usuário tenha controle da irrigaçao de cada cultura utilizada.
 
-<a href= "#"><img src="modelo-relacional.png" alt="Serial Plotter" border="0" width=40% height=40%></a>
+<a href= "#"><img src="assets/modelo-relacional.png" alt="Serial Plotter" border="0" width=40% height=40%></a>
 
 Código Python:
 - Adicionamos o armazenamento da cultura do solo.
