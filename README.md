@@ -113,15 +113,16 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 #### **Melhorias Implementadas**
 Banco de dados:
 - Substituimos a tabela t_sensor para t_leitura para deixar o banco de dados mais coerente com o projeto.
-- Ajuste do tipo de dado do campo potassio fosforo
-- Add status irrigacao
-- Na t irrigaçao data_hora para nome
-- FOTO
+- Ajuste do tipo de dado do campo de leitura do potássio e do fósforo de char para float.
+- Adicionamos à tabela t_leitura o campo de status_irrigacao.
+- Substituimos na tabela t_irrigacao o campo data_hora para irrigacao_cultura, permitindo que o usuário tenha controle da irrigaçao de cada cultura utilizada.
+
+<a href= "#"><img src="modelo-relacional.png" alt="Serial Plotter" border="0" width=40% height=40%></a>
+
 Código Python:
-
-
-
-
+- Adicionamos o armazenamento da cultura do solo.
+- Adicionamos a condição para o status da bomba (ativada/desativada).
+- O controle da irrigação agora é feito a partir da escolha da data em que o usuário deseja saber qual foi o status da bomba (ativada/desativada).
 
 ## 📋 Licença
 
