@@ -50,6 +50,13 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 *Acrescentar as informações necessárias sobre pré-requisitos (IDEs, serviços, bibliotecas etc.) e instalação básica do projeto, descrevendo eventuais versões utilizadas. Colocar um passo a passo de como o leitor pode baixar o seu código e executá-lo a partir de sua máquina ou seu repositório. Considere a explicação organizada em fase.*
 #### Código Python:
+   - Tenha uma IDE que possibilite a execução do código.
+   - Instale as bibliotecas necessárias para os códigos:
+        main.py: oracledb, pandas e os.
+        modelagem.py: pandas, numpy, scikit-learn.
+        front.py: streamlit, pandas, matplotlib, numpy, scikit-learn.
+   - Baixe o arquivo csv disponibilizado.
+   - Crie as tabelas do banco de dados oracle e faça a conexão com seu usuário e senha.
 #### Código C++:
    - Abra o link do circuito wokwi: https://wokwi.com/projects/415903032457764865
    - Instale as bibliotecas: DHT.h, Wire.h, LiquidCrystal_I2C.h
@@ -123,6 +130,10 @@ Código Python:
 - Adicionamos o armazenamento da cultura do solo.
 - Adicionamos a condição para o status da bomba (ativada/desativada).
 - O controle da irrigação agora é feito a partir da escolha da data em que o usuário deseja saber qual foi o status da bomba (ativada/desativada).
+
+## Links
+- Link do vídeo: https://youtu.be/7uJsPhI4X_k?si=sa0lBb4SR6A7abQj
+- Link do circuito wokwi: https://wokwi.com/projects/415903032457764865
 
 ## 📋 Licença
 
