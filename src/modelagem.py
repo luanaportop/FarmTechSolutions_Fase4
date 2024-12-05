@@ -52,6 +52,6 @@ print(f"Acurácia: {accuracy:.2f}")
 
 
 # 6. Previsão futura
-novo_dado = np.array([[40, 30, 800, 1, 0]])  # Exemplo de umidade, temperatura, luminosidade, P, K
+novo_dado = pd.DataFrame([[40, 30, 800, 1, 0]], columns=X.columns)
 previsao = modelo.predict(novo_dado)
 print("Necessidade de irrigação:", "Sim" if previsao[0] else "Não")
