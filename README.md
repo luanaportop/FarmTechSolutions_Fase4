@@ -13,7 +13,7 @@
 ## 👨‍🎓 Integrantes: 
 - <a href="https://www.linkedin.com/in/luana-porto-pereira-gomes/">Luana Porto Pereira Gomes</a>
 - <a href="https://www.linkedin.com/in/priscilla-oliveira-023007333/">Priscilla Oliveira </a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Paulo Bernardes</a> 
+- <a href="https://www.linkedin.com/in/paulobernardesqs?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">Paulo Bernardes</a> 
 
 ## 👩‍🏫 Professores:
 ### Tutor(a) 
